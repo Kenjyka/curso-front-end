@@ -10,4 +10,8 @@
 |git config --list|lista as configurações do git|
 |git log|Mostra o histórico de commits|
 |git branch -M nome| Renomeia a branch atual para nome|
+|git branch|ver as branchs no git|
 |git checkout -b "nome"|Cria um Branch nomeiado como "nome"|
+|git merge nome.branch|mescla as infromações da ramificação na atual|
+|git branch -d nome.branch|Remove uma ramificação|
+|git config --global --unset-all user.email or user.name|remove a configurações feitas|
