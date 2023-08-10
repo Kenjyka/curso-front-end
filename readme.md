@@ -4,9 +4,9 @@ Repositório utilizado para meio de aprendizado de tecnologias e técnicas utili
 
 ---
 ### Sumário
-1. [Exercicios em portugol](../portugol)
+1. [Exercicios em portugol](./portugol)
 2. VScode
-    1. [comandos CMD](./markdown/cmd.md)
-    2. [Comandos de Markdown](./markdown/markdown.md)
-    3. [comandos de Git](./markdown/git.md)
+    1. [comandos CMD](vscode/markdown/cmd.md)
+    2. [Comandos de Markdown](vscode/markdown/markdown.md)
+    3. [comandos de Git](vscode/markdown/git.md)
 
