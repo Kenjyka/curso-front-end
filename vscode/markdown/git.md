@@ -22,3 +22,4 @@
 |git origin add origin url|adiciona a url para o push em origin|
 |git origin rm origin|remove a url da origin|
 |git clone url|clona a pasta da url|
+|git pull|baixa o conteudo da pasta do github|
