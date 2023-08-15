@@ -30,6 +30,7 @@
     - type = define o tipo de organização
     - start = define o inicio do da contagem da lista
 - li = list item, item de uma lista
+- img = coloca uma imagem
 - !---- = colocando isso entre <> cria uma tag de comentarios
 - &copy ; = símbolo de copyright
 - &reg ; = símbolo de marca registrada
