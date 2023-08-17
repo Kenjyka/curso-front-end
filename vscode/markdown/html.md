@@ -48,3 +48,13 @@
 ---
 ### syntax
 - a = ancora, cria um link
+- section = seção
+- article = artigo
+- table = tabela
+- th = table head, os titulos ou cabeçalhos da tabela
+- tr = table row, as linhas da tabela
+- td = table data, informação dentro da celula
+- tbody = corpo da tabela
+- thead = cabeçalho da tabela
+- tfooter = rodapé da tabela
+- caption = legenda
