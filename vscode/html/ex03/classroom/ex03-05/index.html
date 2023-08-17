@@ -4,74 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brasileirão</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <table>
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col id="pontos" style="background-color: #f7f7f7;">
+            <col>
+            <col style="background-color: #f7f7f7;">
+            <col>
+            <col style="background-color: #f7f7f7;">
+            <col>
+            <col style="background-color: #f7f7f7;">
+            <col>
+            <col style="background-color: #f7f7f7;">
+        </colgroup>
         <thead>
-            <tr><th></th><th></th><th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th><th>%</th></tr>
+            <tr><th colspan="2"></th><th></th><th style="background-color: white;">P</th><th>J</th><th style="background-color: white;">V</th><th>E</th><th style="background-color: white;">D</th><th>GP</th><th style="background-color: white;">GC</th><th>SG</th><th style="background-color: white;">%</th></tr>
         </thead>
         <tbody>
             <tr>
-                <td>1</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao topo-classificacao">1</td><td><img src="../../../../imagens/Times/Corinthians.png" alt="corinthians"></td><td class="nome">Corinthians</td><td class="pontos">17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
             </tr>
             <tr>
-                <td>2</td><td>Ceará</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>7</td><td>1</td><td>6</td><td>81</td>
+                <td class="classificacao topo-classificacao">2</td><td><img src="../../../../imagens/Times/Ceará.png" alt="ceará"></td><td class="nome">Ceará</td><td class="pontos">17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>7</td><td>1</td><td>6</td><td>81</td>
             </tr>
             <tr>
-                <td>3</td><td>Fluminense</td><td>15</td><td>7</td><td>5</td><td>0</td><td>2</td><td>11</td><td>5</td><td>6</td><td>71.4</td>
+                <td class="classificacao topo-classificacao">3</td><td><img src="../../../../imagens/Times/Fluminense.png" alt="Fluminense"></td><td class="nome">Fluminense</td><td class="pontos">15</td><td>7</td><td>5</td><td>0</td><td>2</td><td>11</td><td>5</td><td>6</td><td>71.4</td>
+            </tr>
+            <tr style="border-bottom: 2px solid #CCCCCC;">
+                <td class="classificacao Santos">4</td><td><img src="../../../../imagens/Times/Santos.png" alt="Santos"></td><td class="nome">Santos</td><td class="pontos">12</td><td>7</td><td>3</td><td>3</td><td>1</td><td>15</td><td>10</td><td>5</td><td>57.1</td>
             </tr>
             <tr>
-                <td>4</td><td>Santos</td><td>12</td><td>7</td><td>3</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao meio-classificacao">5</td><td><img src="../../../../imagens/Times/São Paulo.png" alt="São Paulo"></td><td class="nome">São Paulo</td><td class="pontos">11</td><td>7</td><td>3</td><td>2</td><td>2</td><td>9</td><td>6</td><td>3</td><td>52.4</td>
             </tr>
             <tr>
-                <td>5</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao meio-classificacao">6</td><td><img src="../../../../imagens/Times/Goiás Esporte Clube-GO.png" alt="Goiás"></td><td class="nome">Goiás</td><td class="pontos">10</td><td>7</td><td>3</td><td>1</td><td>3</td><td>9</td><td>10</td><td>-1</td><td>47.6</td>
             </tr>
             <tr>
-                <td>6</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao meio-classificacao">7</td><td><img src="../../../../imagens/Times/Botafogo.png" alt="Botafogo"></td><td class="nome">Botafogo</td><td class="pontos">9</td><td>7</td><td>2</td><td>3</td><td>2</td><td>13</td><td>11</td><td>2</td><td>42.9</td>
             </tr>
             <tr>
-                <td>7</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao meio-classificacao">8</td><td><img src="../../../../imagens/Times/Flamengo.png" alt="Flamengo"></td><td class="nome">Flamengo</td><td class="pontos">9</td><td>7</td><td>2</td><td>3</td><td>2</td><td>9</td><td>8</td><td>1</td><td>42.9</td>
             </tr>
             <tr>
-                <td>8</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao meio-classificacao">9</td><td><img src="../../../../imagens/Times/Cruzeiro.png" alt="Cruzeiro"></td><td class="nome">Cruzeiro</td><td class="pontos">9</td><td>6</td><td>2</td><td>3</td><td>1</td><td>7</td><td>6</td><td>1</td><td>50</td>
             </tr>
             <tr>
-                <td>9</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao meio-classificacao">10</td><td><img src="../../../../imagens/Times/Guarani.png" alt="Guarani"></td><td class="nome">Guarani</td><td class="pontos">9</td><td>6</td><td>2</td><td>3</td><td>1</td><td>7</td><td>7</td><td>0</td><td>50</td>
             </tr>
             <tr>
-                <td>10</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao meio-classificacao">11</td><td><img src="../../../../imagens/Times/logo-palmeiras.png" alt="Palmeiras"></td><td class="nome">Palmeiras</td><td class="pontos">8</td><td>6</td><td>2</td><td>2</td><td>2</td><td>5</td><td>4</td><td>1</td><td>44.4</td>
             </tr>
             <tr>
-                <td>11</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao meio-classificacao">12</td><td><img src="../../../../imagens/Times/Grêmio.png" alt="Grêmio"></td><td class="nome">Grêmio</td><td class="pontos">8</td><td>7</td><td>2</td><td>2</td><td>3</td><td>10</td><td>11</td><td>-1</td><td>38.1</td>
             </tr>
             <tr>
-                <td>12</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao meio-baixo-classificacao">13</td><td><img src="../../../../imagens/Times/Avaí.png" alt="Avaí"></td><td class="nome">Avaí</td><td class="pontos">8</td><td>7</td><td>2</td><td>2</td><td>3</td><td>10</td><td>11</td><td>-1</td><td>38.1</td>
             </tr>
             <tr>
-                <td>13</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao meio-baixo-classificacao">14</td><td><img src="../../../../imagens/Times/Vitória.png" alt="Vitória"></td><td class="nome">Vitória</td><td class="pontos">8</td><td>7</td><td>2</td><td>2</td><td>3</td><td>7</td><td>8</td><td>-1</td><td>38.1</td>
             </tr>
             <tr>
-                <td>14</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao meio-baixo-classificacao">15</td><td><img src="../../../../imagens/Times/Prudente.png" alt="Prudente"></td><td class="nome">Prudente</td><td class="pontos">8</td><td>6</td><td>2</td><td>2</td><td>2</td><td>9</td><td>11</td><td>-2</td><td>44.4</td>
+            </tr>
+            <tr style="border-bottom:  2px solid #CCCCCC;">
+                <td class="classificacao meio-baixo-classificacao">16</td><td><img src="../../../../imagens/Times/Athletico Paranaense HD.png" alt="Atrletico-pr"></td><td class="nome">Atlético-PR</td><td class="pontos">7</td><td>7</td><td>2</td><td>1</td><td>4</td><td>10</td><td>15</td><td>-5</td><td>33.3</td>
             </tr>
             <tr>
-                <td>15</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao fim-classificacao">17</td><td><img src="../../../../imagens/Times/Internacional.png" alt="Internacional"></td><td class="nome">Internacional</td><td class="pontos">6</td><td>6</td><td>2</td><td>0</td><td>4</td><td>10</td><td>12</td><td>-2</td><td>33.3</td>
             </tr>
             <tr>
-                <td>16</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao fim-classificacao">18</td><td><img src="../../../../imagens/Times/Atlético Mineiro.png" alt="Athletico-mg"></td><td class="nome">Atlético-MG</td><td class="pontos">6</td><td>7</td><td>2</td><td>0</td><td>5</td><td>10</td><td>16</td><td>-6</td><td>28.6</td>
             </tr>
             <tr>
-                <td>17</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao fim-classificacao">19</td><td><img src="../../../../imagens/Times/Vasco da Gama.png" alt="Vasco"></td><td class="nome">Vasco</td><td class="pontos">5</td><td>7</td><td>1</td><td>2</td><td>4</td><td>5</td><td>12</td><td>-7</td><td>23.8</td>
             </tr>
             <tr>
-                <td>18</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
-            </tr>
-            <tr>
-                <td>19</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
-            </tr>
-            <tr>
-                <td>20</td><td>Corinthias</td><td>17</td><td>7</td><td>5</td><td>2</td><td>0</td><td>15</td><td>8</td><td>7</td><td>81</td>
+                <td class="classificacao fim-classificacao">20</td><td><img src="../../../../imagens/Times/Atlético Goianiense.png" alt="Atlético-go"></td><td class="nome">Atlético-GO</td><td class="pontos">1</td><td>6</td><td>0</td><td>1</td><td>5</td><td>3</td><td>9</td><td>-6</td><td>5.6</td>
             </tr>
         </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="12" rowspan="2" id="footer">
+                        <p id="legendas">
+                            <svg class="square"><rect width="15px" height="15px" fill="#003366"></rect></svg> TAÇA LIBERTADORES <svg class="square"><rect width="15px" height="15px" fill="#1398be"></rect></svg> PRÉ-LIBERTADORES  <svg class="square"><rect width="15px" height="15px" fill="#de9800"></rect></svg>SUL-AMERICANA <svg class="square"><rect width="15px" height="15px" fill="#c91b04"></rect></svg> REBAIXADOS
+                        </p>
+                        <p id="legenda-sigla">
+                            <strong>P</strong> pontos <strong>J</strong>jogos <strong>E</strong> empates <strong>D</strong> derrotas <strong>GP</strong> gols pró <strong>GC</strong> gols contra <strong>SG</strong> saldo de gols <strong>(%)</strong> aproveitamento
+                        </p>
+                </td>
+            </tr>
+        </tfoot>
     </table>
 </body>
 </html>
