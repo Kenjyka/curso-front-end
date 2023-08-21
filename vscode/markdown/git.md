@@ -19,7 +19,8 @@
 |git merge nome.branch|mescla as infromações da ramificação na atual|
 |git branch -d nome.branch|Remove uma ramificação|
 |git config --global --unset-all user.email or user. name|remove a configurações feitas|
-|git origin add origin url|adiciona a url para o push em origin|
-|git origin rm origin|remove a url da origin|
+|git remote add origin url|adiciona a url para o push em origin|
+|git remote rm origin|remove a url da origin|
 |git clone url|clona a pasta da url|
 |git pull|baixa o conteudo da pasta do github|
+|git alias.nome comando / "!comando 1 && comando 2"|cria um apelido para um ou varios comandos|

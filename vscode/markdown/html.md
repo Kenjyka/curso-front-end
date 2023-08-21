@@ -58,3 +58,5 @@
 - thead = cabeçalho da tabela
 - tfooter = rodapé da tabela
 - caption = legenda
+- colgroup = grupo de colunas para configuração do estilo
+- col = representativo das colunas
