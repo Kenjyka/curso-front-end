@@ -19,3 +19,12 @@
 |line-height|define a altura da linha|
 |word-spacing|define o espaçamento de uma palavra para a outra|
 |text-shadow|define a sombra do texto|
+
+###Medidas
+
+|||| 
+|:--:|:--:|:--:|
+|Cm|px|pt|
+|em|ex|rem|
+|vw|vh|%
+
