@@ -20,7 +20,7 @@
 |word-spacing|define o espaçamento de uma palavra para a outra|
 |text-shadow|define a sombra do texto|
 
-###Medidas
+### Medidas
 
 |||| 
 |:--:|:--:|:--:|
@@ -28,3 +28,13 @@
 |em|ex|rem|
 |vw|vh|%
 
+### Manipulação de conteudo
+|Nome|Funcionamento|
+|--|--|
+|Displays|muda a forma que os conteudos são mostrados|
+|display:Inline|Organiza os conteudos em linhas|
+|display:block|Organiza os conteudos em blocos|
+|display:inline-block| alinha em o texto em linha mas o conteudo em bloco|
+|border|muda o tamanho e outras configurações da borda|
+|padding|muda o tamanho e outras configurações do acolchoamento|
+|Margin|Muda o tamanho e outras configurações da margem|

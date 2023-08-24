@@ -31,6 +31,7 @@
     - start = define o inicio do da contagem da lista
 - li = list item, item de uma lista
 - img = coloca uma imagem
+- span = uma seção de texto, uma variação sintaxe da div
 - !---- = colocando isso entre <> cria uma tag de comentarios
 - &copy ; = símbolo de copyright
 - &reg ; = símbolo de marca registrada
@@ -50,6 +51,10 @@
 - a = ancora, cria um link
 - section = seção
 - article = artigo
+- main = principal
+- small = texto
+- sup = coloca acima
+- sub = coloca abaixo
 - table = tabela
 - th = table head, os titulos ou cabeçalhos da tabela
 - tr = table row, as linhas da tabela
