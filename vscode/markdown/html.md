@@ -65,3 +65,12 @@
 - caption = legenda
 - colgroup = grupo de colunas para configuração do estilo
 - col = representativo das colunas
+- form = formulário
+- input = uma caixa permitindo o usuário de dar um valor
+- label = um rótulo para os cmapos de form
+- select = seleconar dentre as options
+- option = opção para seleção
+- optgroup = grupo de opções
+- text, number, password = recebe valores de acordo com o tipo
+- range = recebe um valor dentre um alcance de valores
+- submit = envia todas as informações do form

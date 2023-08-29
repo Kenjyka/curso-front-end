@@ -113,3 +113,32 @@ footer > p > a {
     color: white;
     font-weight: bolder;
 }
+
+input[type="checkbox"]:checked, input[type="checkbox"] {
+    appearance: none;
+}
+
+#iremember{
+    background-color: gray;
+    width: 15px;
+    height: 15px;
+    border: 1px solid;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#iremember::after {
+    content: "✔";
+    font-size: 3em;
+    font-size: 1em;
+    color: white;
+    display: none;
+}
+#iremember:checked{
+    appearance: none;
+}
+#iremember:checked::after {
+    display: block;
+}
