@@ -74,3 +74,4 @@
 - text, number, password = recebe valores de acordo com o tipo
 - range = recebe um valor dentre um alcance de valores
 - submit = envia todas as informações do form
+- nav = navbar, barra de navegação
