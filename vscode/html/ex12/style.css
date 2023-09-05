@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    text-align: center;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main section {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#display {
+    display: flex;
+    width: 80%;
+    height: 30px;
+    background-color: black;
+    color: #fff;
+    text-align: right;
+}
+main table {
+    width: 100%;
+    height: 80%;
+    border-spacing: 20px;
+}
+main table td{
+    background-color: rgb(212, 212, 212);
+    width: 20%;
+    height: 20%;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px 4px rgb(100, 100, 100);
+    font-size: 20pt;
+}
