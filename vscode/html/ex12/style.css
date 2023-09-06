@@ -56,7 +56,13 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type=number] {
+    appearance: textfield;
   -moz-appearance: textfield;
+}
+
+#display span {
+    min-height: 30px;
+    height: auto;
 }
 main table {
     width: 100%;
