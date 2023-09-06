@@ -26,11 +26,37 @@ main section {
 
 #display {
     display: flex;
+    flex-direction: column;
     width: 80%;
-    height: 30px;
     background-color: black;
     color: #fff;
     text-align: right;
+}
+#display span {
+    height: 30px;
+}
+#display input {
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    height: 50px;
+    text-align: inherit;
+    font-size: 20pt;
+    box-sizing: border-box;
+    padding: 15px;
+}
+#display input:focus{
+    outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 main table {
     width: 100%;
