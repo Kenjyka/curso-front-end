@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D4DDEE;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2e2e2e;
+}
+
+main {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-content: center;
+    justify-content: center ;
+    gap: 20px;
+}
+main > section {
+    background-color: #fff;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section p, section img {
+    margin: .3em;
+}
+section img {
+    margin-bottom: 1em;
+}
+section p > span {
+    color: #EE2091;
+    font-weight: bolder;
+}
+
+main > aside {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    gap: 10px;
+    font-size: 1em;
+}
+
+main aside > section {
+    background-color: #E8EEFA;
+    border: 5px solid #fff;
+    display: flex;
+    flex-direction: column;
+}
+aside span {
+    margin-top: 20px;
+    text-align: center  ;
+}
+form > div {
+    margin: 8px;
+    margin-left: 14px;
+}
+
+form abbr {
+    text-align: center;
+}
+
+form > div > input {
+    height: 30px;
+    width: 60%;
+}
+
+#adicionais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+#adicionais div {
+    display: grid;
+    grid-template-columns: .1fr 2fr;
+
+}
+#adicionais input {
+    margin-right: 10px;
+}
+#adicionais abbr {
+    margin-top: 10px;
+    font-size: small;
+    color: #949494;
+    text-decoration: none;
+}
+
+#submit {
+    margin-left: 70px;
+    font-size: .8em;
+    padding: 5px 8px;
+}
+aside section a {
+    text-align: center;
+    margin-top: 20px;
+}
+footer {
+    margin-top: 20px;
+    background-color: #BCCDE9;
+    width: 80%;
+    padding: 5px 0;
+    text-align: center;
+}
+@media (min-width: 1400px) {
+    main aside {
+        font-size: 1.5em;
+    }
+
+    #adicionais abbr {
+        font-size: .8em;
+    }
+    aside span {
+        margin: 20px ;
+    }
+    form > div > input {
+        height: 50px;
+    }
+    form > div {
+        margin: 20px;
+    }
+    #submit {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 800px) {
+    main > section {
+        display: none;
+    }
+    main {
+        display: flex;
+        height: 40%;
+        width: 60%;
+    }
+    main {
+        height: fit-content;
+    }
+    footer {
+        width: 55%;
+    }
+}
