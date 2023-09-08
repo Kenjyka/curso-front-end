@@ -4,7 +4,10 @@ const botaoLogin = document.getElementById('loginButton')
 const login = document.getElementById('login')
 const senha = document.getElementById('password')
 
-audio.volume = 0
+audio.volume = 0.1
+setTimeout(() => {
+    audio.volume = 0
+}, 2);
 
 function options() {
     console.log(optionMenu)
