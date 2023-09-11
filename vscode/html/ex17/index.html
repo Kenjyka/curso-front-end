@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfere</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        main {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .lado {
+            border: 1px solid black;
+            width: 400px;
+            height: auto;
+            min-height: 200px;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .lado > div {
+            width: 100%;
+            margin: 5px;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .lado > div:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        .selected {
+            box-shadow: 0px 0 9px 2px green;
+        }
+        .selected-right {
+            box-shadow: 0px 0 9px 2px red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="lado" id="esquerdo"></div>
+        <div>
+            <button>Tranferir</button>
+        </div>
+        <div class="lado" id="direito"></div>
+    </main>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -7,7 +7,7 @@ const senha = document.getElementById('password')
 audio.volume = 0.1
 setTimeout(() => {
     audio.volume = 0
-}, 2);
+}, 200);
 
 function options() {
     console.log(optionMenu)
