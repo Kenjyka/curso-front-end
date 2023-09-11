@@ -14,14 +14,18 @@ function appending() {
     esquerda.forEach(element => {
         let caixaElemento = esquerdacaixa.appendChild(document.createElement('div'))
         caixaElemento.innerText = element
+        if(caixaElemento.classList.contains('selected')) caixaElemento.classList.remove('selected')
     });
     direita.forEach(element => {
         let caixaElemento = direitacaixa.appendChild(document.createElement('div'))
         caixaElemento.innerText = element
+        if(caixaElemento.classList.contains('selected-right')) caixaElemento.classList.remove('selected-right')
     })
 }
 
 appending()
+
+
 let coisasdaesquerda = [...esquerdacaixa.querySelectorAll('div')]
 let coisasdadireita = [...direitacaixa.querySelectorAll('div')]
 console.log(coisasdadireita)
@@ -39,26 +43,35 @@ coisasdadireita.forEach(element => {
 button.addEventListener('click', trocar)
 
 function trocar() {
+
+    
     let selecionadosE = [...document.querySelectorAll('.selected')]
     let selecionadosD = [...document.querySelectorAll('.selected-right')]
 
     esquerda.forEach((element, index) => {
         selecionadosE.forEach(selecionado => {
             if(element == selecionado.innerText) {
-                direita += element
+                direita[direita.length] = element
                 esquerda.splice(index,1)
                 console.log(esquerda)
             }
         })
     })
     
-    direita.forEach((element, index) => {
+    direita.forEach( (element, index) => {
         selecionadosD.forEach(selecionado => {
             if(element == selecionado.innerText) {
-                esquerda += element
+                esquerda[esquerda.length] = element
                 direita.splice(index,1)
                 console.log(direita)
             }
         })
     })
+    appending()
+    reselect()
+}
+
+function reselect() {
+    coisasdaesquerda = [...esquerdacaixa.querySelectorAll('div')]
+    coisasdadireita = [...direitacaixa.querySelectorAll('div')]
 }
