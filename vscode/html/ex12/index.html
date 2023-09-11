@@ -8,34 +8,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Calculadora</h1>
-    </header>
     <main>
         <section>
             <div id="display">
                 <span></span>
-                <input type="number"></input>
+                <input type="text" value="" placeholder="" title="display-calculos" onkeypress="return numberVerifier(event)"></input>
             </div>
             
             <table>
                 <tr>
-                    <td colspan="2" id="clear"> C</td> <td>apagar</td><td class="operacao">*</td>
+                    <td colspan="2" id="clear" class="blue"> C</td> <td id="erase">apagar</td><td class="operacao blue">*</td>
                 </tr>
                 <tr>
-                    <td class="number">1</td><td class="number">2</td><td class="number">3</td><td class="operacao">/</td>
+                    <td class="number">1</td><td class="number">2</td><td class="number">3</td><td class="operacao blue">/</td>
                 </tr>
                 <tr>
-                    <td class="number">4</td><td class="number">5</td><td class="number">6</td><td class="operacao">-</td>
+                    <td class="number">4</td><td class="number">5</td><td class="number">6</td><td class="operacao blue">-</td>
                 </tr>
                 <tr>
-                    <td class="number">7</td><td class="number">8</td><td class="number">9</td><td class="operacao">+</td>
+                    <td class="number">7</td><td class="number">8</td><td class="number">9</td><td class="operacao blue" rowspan="2">+</td>
                 </tr>
                 <tr>
-                    <td colspan="4" id="igual">=</td>
+                    <td class="number">0</td><td class="number">.</td><td id="igual" class="blue">=</td>
                 </tr>
             </table>
-        </section>
+            <footer>
+                <a href="https://github.com/Kenjyka">Created by kenjyka</a>
+            </footer>
+        </section>    
     </main>
 
 

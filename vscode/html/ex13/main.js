@@ -3,7 +3,6 @@ const senha = document.getElementById('senha-login')
 const botao = document.getElementById('button')
 
 botao.addEventListener('click', (event) => {
-    event.preventDefault()
     console.log('vim de uma arrow function')
 
     if (login.value == ''){
