@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jogo da velha</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="reset()">reset</button>
+    <button id="limpa" onclick="limpa()">limpa</button>
+    <span>X<span id="X">0</span>|<span id="O">0</span>O</span>
+    <table>
+        <tr>
+            <td class=" x-1 y-1 xy-1"></td>
+            <td class=" x-1 y-2"></td>
+            <td class="last-x x-1 y-3 xy-2"></td>
+        </tr>
+        <tr>
+            <td class="x-2  y-1"></td>
+            <td class="x-2  y-2 xy-1 xy-2"></td>
+            <td class="x-2 last-x y-3"></td>
+        </tr>
+        <tr>
+            <td class="x-3 y-1 xy-2"></td>
+            <td class="x-3 y-2"></td>
+            <td class="x-3 last-x y-3 xy-1" ></td>
+        </tr>
+    </table>
+
+    <script src="main.js"></script>
+</body>
+</html>
