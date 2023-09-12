@@ -21,24 +21,21 @@ function appending() {
         caixaElemento.innerText = element
         if(caixaElemento.classList.contains('selected-right')) caixaElemento.classList.remove('selected-right')
     })
+    let coisasdaesquerda = [...esquerdacaixa.querySelectorAll('div')]
+    let coisasdadireita = [...direitacaixa.querySelectorAll('div')]
+    coisasdaesquerda.forEach(element => {
+        element.addEventListener('click', () => {
+            element.classList.toggle('selected')
+        })
+    })
+    coisasdadireita.forEach(element => {
+        element.addEventListener('click', () => {
+            element.classList.toggle('selected-right')
+        })
+    })
 }
 
 appending()
-
-
-let coisasdaesquerda = [...esquerdacaixa.querySelectorAll('div')]
-let coisasdadireita = [...direitacaixa.querySelectorAll('div')]
-console.log(coisasdadireita)
-coisasdaesquerda.forEach(element => {
-    element.addEventListener('click', () => {
-        element.classList.toggle('selected')
-    })
-})
-coisasdadireita.forEach(element => {
-    element.addEventListener('click', () => {
-        element.classList.toggle('selected-right')
-    })
-})
 
 button.addEventListener('click', trocar)
 

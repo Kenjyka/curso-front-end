@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            min-height: 80vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(0, 225, 255);
+            outline: 10px solid white;
+            outline-offset: -20px;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        form {
+            width: 100%;
+            text-align: center;
+        }
+        form > div {
+            margin-top: 5px;
+            
+        }
+        form input {
+            width: 80%;
+            text-align: center;
+            height: 30px;
+        }
+        form button {
+            background-color: #fff;
+            border: 0;
+            padding: 5px;
+        }
+        #things {
+            margin: 20px 0;
+            gap: 5px;
+            min-height: 60vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: start;
+        }
+        #things > div {
+            background-color: #fff;
+            height: 100px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 10px;
+            position: relative;
+            flex-wrap: wrap;
+            overflow: hidden;
+            padding-right: 40px;
+        }
+        .remove {
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+            cursor: pointer;
+        }
+        .complete {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+
+        <form action="" method="post" >
+            <label for="texto">Cadastre uma tarefa</label>
+            <div>
+                <input type="text" name="todo" id="todo">
+                <button>enviar</button>
+            </div>
+        </form>
+
+        <div id="things">
+            
+        </div>
+
+    </section>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
