@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Lista de <span>tarefas</span></h1>
+    <main class="container">
+        <form id="cadastro">
+            <input type="text" name="texto-input" id="texto-input" placeholder="digite sua nova tarefa">
+            <button> Adicionar </button>
+        </form>
+
+        <div id="tarefas">
+            <ul>
+                <li>tarefa 1
+                    <div>
+                        <button class="excluir">Excluir</button>
+                        <button class="concluir">Concluido</button>
+                    </div>
+                </li>
+                <li>tarefa 1
+                    <div>
+                        <button class="excluir">Excluir</button>
+                        <button class="concluir">Concluido</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+</body>
+</html>
