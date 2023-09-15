@@ -14,30 +14,33 @@
 
 </head>
 <body>
-    <h1>Lista de <span>tarefas</span></h1>
+    <header>
+        <h1>Lista de <span>tarefas</span></h1>
+    </header>
     <main class="container">
         <form id="cadastro">
             <input type="text" name="texto-input" id="texto-input" placeholder="digite sua nova tarefa">
-            <button> Adicionar </button>
+            <button id="adicionar"> Adicionar Tarefa</button>
         </form>
 
         <div id="tarefas">
             <ul>
                 <li>tarefa 1
                     <div>
-                        <button class="excluir">Excluir</button>
-                        <button class="concluir">Concluido</button>
+                        <button class="excluir"><img src="../../imagens/icons8-excluir-48.png" alt="icone de excluir"></button>
+                        <button class="concluir"><img src="../../imagens/icons8-tarefa-concluída-48.png" alt="icone de concluir"></button>
                     </div>
                 </li>
                 <li>tarefa 1
                     <div>
-                        <button class="excluir">Excluir</button>
-                        <button class="concluir">Concluido</button>
+                        <button class="excluir"><img src="../../imagens/icons8-excluir-48.png" alt="icone de excluir"></button>
+                        <button class="concluir"><img src="../../imagens/icons8-tarefa-concluída-48.png" alt="icone de concluir"></button>
                     </div>
                 </li>
             </ul>
         </div>
 
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
