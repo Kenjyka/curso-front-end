@@ -1,7 +1,6 @@
 const btnAdicionar = document.getElementById('adicionar')
-const listaTarefas = document.querySelector('ul')
+let listaTarefas = document.querySelector('ul')
 const valorTarefa = document.getElementById('texto-input')
-var itens = []
 
 btnAdicionar.addEventListener('click', (evento) => {
     evento.preventDefault()
@@ -9,35 +8,11 @@ btnAdicionar.addEventListener('click', (evento) => {
     if (valorTarefa.value == '' ) {
         alert('Digite uma tarefa válida')
     } else {
-        
+        escutador()
         const tarefa = criarTarefa(valorTarefa.value)
         redereizarTarefa(tarefa)
         salvadorMemoria()
     }
-    
-    listaTarefas.addEventListener('click', (elemento) => {
-        evento.stopImmediatePropagation()
-
-        const itemclickado = elemento.target;
-
-        if (itemclickado.parentElement.classList.contains('excluir')) {
-            itemclickado.parentElement.parentElement.parentElement.remove()
-            salvadorMemoria()
-        } else if (itemclickado.classList.contains('excluir')) {
-            itemclickado.parentElement.parentElement.remove()
-        } else if (itemclickado.parentElement.classList.contains('concluir')) {
-            if (itemclickado.parentElement.parentElement.parentElement.firstChild.classList.contains('concluido')) {
-                itemclickado.parentElement.parentElement.parentElement.firstChild.classList.remove('concluido')
-            } else {
-                itemclickado.parentElement.parentElement.parentElement.firstChild.classList.add('concluido')
-            }
-            
-            salvadorMemoria()
-        } else if (itemclickado.classList.contains('concluir')) {
-            itemclickado.parentElement.parentElement.firstChild.classList.toggle('concluido')
-            salvadorMemoria()
-        }
-    })
 
     valorTarefa.value = ''
 })
@@ -60,18 +35,39 @@ function redereizarTarefa (tarefa) {
 }
 
 function salvadorMemoria () {
-    let itensLista = Array.from(listaTarefas.children)
+    let itensLista = listaTarefas.innerHTML
+    localStorage.setItem('itens', JSON.stringify(itensLista))
+}
 
-    for (let i = 0; i < itensLista.length; i++) {
-        itens[i] = itensLista[i].innerHTML
-    }
-    let itensLocal = JSON.stringify(itens)
-    localStorage.setItem('itens', itensLocal)
+function escutador () {
+    listaTarefas.addEventListener('click', (elemento) => {
+        elemento.stopImmediatePropagation()
+
+        const itemclickado = elemento.target;
+
+        if (itemclickado.parentElement.classList.contains('excluir')) {
+            itemclickado.parentElement.parentElement.parentElement.remove()
+            salvadorMemoria()
+        } else if (itemclickado.classList.contains('excluir')) {
+            itemclickado.parentElement.parentElement.remove()
+        } else if (itemclickado.parentElement.classList.contains('concluir')) {
+            if (itemclickado.parentElement.parentElement.parentElement.firstChild.classList.contains('concluido')) {
+                itemclickado.parentElement.parentElement.parentElement.firstChild.classList.remove('concluido')
+            } else {
+                itemclickado.parentElement.parentElement.parentElement.firstChild.classList.add('concluido')
+            }
+            
+            salvadorMemoria()
+        } else if (itemclickado.classList.contains('concluir')) {
+            itemclickado.parentElement.parentElement.firstChild.classList.toggle('concluido')
+            salvadorMemoria()
+        }
+    })
 }
 
 if (localStorage.getItem('itens')) {
-    itens = JSON.parse(localStorage.getItem('itens'))
-    itens.forEach( item => {
-        rendereizarTarefa(item)
-    })
+    let codeInicio = JSON.parse(localStorage.getItem('itens'))
+    listaTarefas.innerHTML = codeInicio
+    listaTarefas = document.querySelector('ul')
+    escutador()
 }
