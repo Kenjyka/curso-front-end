@@ -11,7 +11,32 @@ const button = document.querySelector('.material-symbols-outlined').parentElemen
 
 button.addEventListener('click', () => {
     if(button.classList.contains("paused")) {
-        button.firstChild.innerText = 
+        button.firstChild.innerText = 'paused'
+        cronometer = setInterval(() => {
+            milisegundos += 1
+            if(milisegundos == 1000) {
+                milisegundos = 0
+                segundos += 1
+            }
+            
+            if (segundos == 60) {
+                minutos += 1
+                segundos = 0
+            }
+            
+            if (minutos == 60) {
+                horas += 1
+                minutos = 0
+            }
+            
+            horassDisplay.innerText = horas
+            minutosDisplay.innerText = minutos
+            segundosDisplay.innerText = segundos
+            milisegundosDisplay.innerText = milisegundos
+        }, 1);
+    } else {
+        button.firstChild.innerText = 'play_arrow'
+        clearInterval(cronometer)
     }
 
     button.classList.toggle("paused")
