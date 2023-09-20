@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'digital';
+    src: url(../ex12/font/LCD-BOLD.TTF);
+}
+
+:root {
+    --manha:linear-gradient(140deg,#d38225 50%, #cf3d3d);
+    --madruga:linear-gradient(140deg,#3b3b3b 20%, #636363);
+    --tarde:linear-gradient(140deg,#449aaf 20%, #bbd4d1);
+    --noite:linear-gradient(140deg,#050758 20%, #000000);
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'digital',Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: var(--manha);
+}
+
+section {
+    max-width: 800px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    background-color: #FFF;
+    box-shadow: 0 0 20px #000;
+    gap: 50px;
+    flex-direction: column;
+    position: relative;
+}
+
+section > div {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 35px;
+    width: 15%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em
+}
+div > span {
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+#meio {
+    margin-bottom: 20px;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 40px;
+}

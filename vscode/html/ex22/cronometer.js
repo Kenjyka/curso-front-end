@@ -7,11 +7,13 @@ const horassDisplay = document.getElementById("h")
 const minutosDisplay = document.getElementById("m")
 const segundosDisplay = document.getElementById("s")
 const milisegundosDisplay = document.getElementById("ms")
-const button = document.querySelector('.material-symbols-outlined').parentElement
+const button = document.querySelector("#play")
+const reset = document.querySelector("#reset")
+var cronometer;
 
 button.addEventListener('click', () => {
-    if(button.classList.contains("paused")) {
-        button.firstChild.innerText = 'paused'
+    if(button.firstElementChild.classList.contains("paused")) {
+        button.firstElementChild.innerText = 'pause'
         cronometer = setInterval(() => {
             milisegundos += 1
             if(milisegundos == 1000) {
@@ -35,9 +37,21 @@ button.addEventListener('click', () => {
             milisegundosDisplay.innerText = milisegundos
         }, 1);
     } else {
-        button.firstChild.innerText = 'play_arrow'
+        
+        button.firstElementChild.innerText = 'play_arrow'
         clearInterval(cronometer)
+        console.log(cronometer)
     }
 
-    button.classList.toggle("paused")
+    button.firstElementChild.classList.toggle("paused")
+})
+
+reset.addEventListener("click", () => {
+    horas = 0; minutos = 0; segundos = 0; milisegundos = 0;
+    horassDisplay.innerText = horas; minutosDisplay.innerText = minutos; segundosDisplay.innerText = segundos; milisegundosDisplay.innerText = milisegundos
+    clearInterval(cronometer)
+    if (!button.firstElementChild.classList.contains("paused")) {
+        button.firstElementChild.classList.add("paused")
+        button.firstElementChild.innerText = "play_arrow"
+    }
 })

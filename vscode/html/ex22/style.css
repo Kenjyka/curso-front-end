@@ -52,6 +52,16 @@ button {
     border-radius: 50%;
     background-color: #ffffff;
     color: rgb(14, 206, 14);
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
 }
 
 #h::after {
