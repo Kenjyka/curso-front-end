@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+section {
+    background-color: #4c7683;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+div {
+    position: relative;
+    background-color: #fff;
+    width: 10%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    padding: 10px;
+    margin: 0 2.5%;
+}
+main {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+button {
+    width: 40px;
+    border: none;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: rgb(14, 206, 14);
+}
+
+#h::after {
+    color: #fff;
+    position: absolute;
+    bottom: 100%;
+    font-size: 30pt;
+    content: 'H';
+}
+
+#m::after {
+    position: absolute;
+    color: #fff;
+    content: 'M';
+    bottom: 100%;
+    font-size: 25pt;
+}
+
+#s::after {
+    position: absolute;
+    color: #fff;
+    content: 'S';
+    bottom: 100%;
+    font-size: 25pt;
+}
+
+#ms {
+    width: 15%;
+    font-size: 3em;
+    margin: 0;
+}
+
+#ms::after {
+    position: absolute;
+    color: #fff;
+    content: 'ms';
+    bottom: 100%;
+    font-size: 25pt;
+}
