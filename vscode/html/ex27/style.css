@@ -7,40 +7,161 @@
     padding: 0;
     margin: 0;
     font-family: 'amazon',Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
-body {
-    overflow: hidden;
-}
+
 header {
-    width: 100vw;
+    width: 100%;
     background-color: #00050D;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     color: #fff;
-    padding: 10px;
+    box-sizing: border-box;
+    height: 50px;
     z-index: 3;
+    position: relative;
+
+
     & > nav {
         display: flex;
+        position: relative;
     }
 
-    & ul {
+    & nav > ul {
         color: inherit;
         list-style: none;
         display: flex;
-        gap: 5px;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        font-weight: bolder;
         & > li {
             color: #AAAAAA;
+            cursor: pointer;
             display: flex;
+            height: 100%;
+            padding: 10px 15px;
             justify-content: center;
             align-items: center;
+            position: relative;
+
             & > span {
                 transition: rotate .15s ease-in;
+            }
+
+            & > .dropdown, & > .dropdown-big {
+                display: none;
+                position: absolute;
+                top: 100%;
+                background-color: #191E25;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                height: fit-content;
+                border-radius: 0 0px 10px 10px;
+                overflow: hidden;
+            }
+
+            & > .dropdown {
+                & ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    
+                    & > li {
+                        color: #aaaaaa;
+                        height: 50px;
+                        width: 100%;
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        & > a {
+                            color: inherit;
+                            text-decoration: none;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        &:hover {
+                            background-color: #fff;
+                            color: #000;
+                        }
+                    }
+                    
+                }
+            }
+
+            & > .dropdown-big {
+                left: 0;
+                width: 100%;
+                height: 380px;
+                justify-content: space-between;
+                padding-left: 60px;
+                & > div {
+                    display: flex;
+                    flex-flow: column wrap;
+                    height: 100%;
+                    padding: 20px 40px 0 40px;
+                    width: 45%;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+
+                    & > span {
+                        font-size: 1.2rem;
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
+
+                    & > ul {
+                        display: flex;
+                        flex-flow: column wrap;
+                        height: 90%;
+                        list-style: none;
+                        & > li {
+                            height: 50px;
+                            text-indent: 10px;
+                            display: flex;
+                            align-items: center;
+                            font-size: 1.2rem;
+                            margin-right: 20px;
+                            color: #aaaaaa;
+                            padding-right: 20px;
+
+                            & > a {
+                                color: inherit;
+                                text-decoration: none;
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                height: 100%;
+                            }
+
+
+                            &:hover {
+                                background-color: #fff;
+                                color: #000;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & > a {
+                text-decoration: none;
+                color: inherit;
+                font-size: inherit;
             }
         }
 
         & > li:hover {
             color: #fff;
+            background-color: #191E25;
+            
+            & > .dropdown, & > .dropdown-big {
+                display: flex;
+            }
 
             & > span {
                 rotate: 180deg;
@@ -57,14 +178,21 @@ header {
         & #logo > img{
             width: 100px;
         }
+
+        & #account, & #search {
+            font-size: 1.5em;
+        }
     }
 }
 
+.no-relative {
+    position: static;
+}
 
 main {
 
     & > section {
-        width: 100vw;
+        width: 100%;
         height: 80vh;
         max-height: 1000px;
         display: flex;
@@ -77,25 +205,24 @@ main {
                 border: 0;
                 border-radius: 2px;
                 color: #fff;
+                cursor: pointer;
             }
         }
     }
 
     #first-section {
         position: relative;
-        height: 70vh;
-
+        height: 80vh;
+        box-sizing: border-box;
+        width: 100%;
         & > aside {
             z-index: 1;
-            position: absolute;
-            left: 0;
             box-sizing: border-box;
-            padding-right: 250px;
-            padding-left: 100px;
-            padding: 120px 250px 0 80px;
             width: 60%;
+            padding-right: 12%;
+            padding-left: 60px;
             color: #fff;
-            background-image: linear-gradient(90deg, #000 70%, #00000070 90%, transparent);
+            background-image: linear-gradient(90deg, #000 70%, #00000070 95%, transparent);
             height: 100%;
             box-sizing: border-box;
             display: flex;
@@ -139,8 +266,11 @@ main {
         }
 
         & > div {
-            width: 100vw;
+            position: absolute;
+            width: 100%;
             height: 100%;
+            left: 0;
+            top: 0;
             background-image: url(images/BRND_MTH23_PVMagnetLeft_1440x675_POST_Final_pt-BR_DOT5677.jpg);
             background-repeat: no-repeat;
             background-size: cover;
@@ -150,27 +280,67 @@ main {
 
     #second-section {
         display: flex;
-        width: 100vw;
+        width: 100%;
+        justify-content: space-around;
+        height: fit-content;
         & > div {
-            width: 60%;
-        
-        & > h3 {
-            font-size: 2.5em;
+            width: 50%;
+            padding: 50px;
+
+
+            & > h3 {
+            font-size: 3em;
             font-weight: lighter;
-        }
+            margin-bottom: 20px;
+            }
+
+            & > p {
+                font-size: 1.5rem;
+            }
 
         }
         & > aside {
-            width: 40%;
             display: flex;
-            flex-wrap: wrap;
-            height: 100px;
-            gap: 20px;
+            flex-flow:row wrap;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 100%;
+            gap: 5px;
+            padding: 10px;
             & > img {
-                width: 50px!important;
+                width: 32%!important;
+                height: 25%;
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: 0 0 10px 5px #000;
+                }
             }
         }
     }
     
 
+}
+
+
+footer {
+    padding: 30px;
+    background-color: #212121;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    & > span {
+        display: flex;
+        gap: 20px;
+    }
+
+    & a {
+        color: #13719D;
+        text-decoration: none;
+    }
+    & > p {
+        color: #828082;
+    }
 }
